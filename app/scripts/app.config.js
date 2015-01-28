@@ -2,7 +2,7 @@
 
 angular.module('huddyfrontendApp')
 
-  .config(function ($urlRouterProvider, $stateProvider) {
+  .config(['$urlRouterProvider', '$stateProvider', function ($urlRouterProvider, $stateProvider) {
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
@@ -15,5 +15,5 @@ angular.module('huddyfrontendApp')
         templateUrl: '/views/dummy.html',
         controller: 'DummyCtrl'
       });
-  })
+  }])
   .constant('API_URL', 'http://localhost/huddyapi/public/dummy');

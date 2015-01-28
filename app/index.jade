@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+  head
+    title="Dummy App"
+    link(rel='stylesheet', href='css/main.css')
+
+  body(ng-app="huddyfrontendApp")
+    ul(class="menu")
+      li(class="menu-item", ui-sref-active="is-active")
+        a(class="menu-item-link", ui-sref="main") Home
+      li(class="menu-item", ui-sref-active="is-active")
+        a(class="menu-item-link", ui-sref="dummy") Dummy Data from the API
+
+    div(ui-view)
+
+    script(src="bower_components/angular/angular.js")
+    script(src="bower_components/ui-router/release/angular-ui-router.js")
+
+    script(src="scripts/app.js")
+    script(src="scripts/app.config.js")
+    script(src="scripts/controllers/dummy.js")
