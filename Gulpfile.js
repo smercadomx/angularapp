@@ -9,6 +9,6 @@ require('fs').readdirSync('./gulptasks').forEach(function(file) {
   }
 });
 
-gulp.task('build', ['jshint', 'install', 'vendor-scripts', 'scripts', 'stylus']);
+gulp.task('build', ['jshint', 'install', 'vendor-scripts', 'scripts', 'stylus', 'jade']);
 
-gulp.task('serve', ['jade', 'watch', 'webserver']);
+gulp.task('serve', ['jade', 'install', 'vendor-scripts', 'stylus-watch', 'watch', 'webserver']);
