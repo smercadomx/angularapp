@@ -3,7 +3,7 @@
 var gulp       = require('gulp'),
     gwebserver = require('gulp-webserver');
 
-gulp.task('webserver', function() {
+gulp.task('webserver', ['jade', 'install', 'vendor-scripts', 'stylus-watch'], function() {
   gulp.src('app')
     .pipe(gwebserver({
       port: 8080,
