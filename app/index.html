@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Testing App</title>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body ng-app="huddyfrontendApp">
+    <h1>testing</h1>
+    <ul class="menu">
+      <li ui-sref-active="is-active" class="menu-item"><a ui-sref="main" class="menu-item-link">Home</a></li>
+      <li ui-sref-active="is-active" class="menu-item"><a ui-sref="dummy" class="menu-item-link">Dummy Data from the API</a></li>
+    </ul>
+    <div ui-view></div><!-- inject:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/ui-router/release/angular-ui-router.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/app.config.js"></script>
+    <script src="scripts/controllers/dummy.js"></script><!-- endinject -->
+  </body>
+</html>

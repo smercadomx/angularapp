@@ -12,3 +12,12 @@ gulp.task('webserver', function() {
       open: true
     }));
 });
+
+gulp.task('build-webserver', function() {
+  gulp.src('dist')
+    .pipe(gwebserver({
+      port: 8080,
+      directoryListing: false,
+      open: true
+    }));
+});
