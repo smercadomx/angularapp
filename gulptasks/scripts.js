@@ -6,7 +6,7 @@ var gulp            = require('gulp'),
     bowerFiles      = require('main-bower-files'),
     angularFilesort = require('gulp-angular-filesort');
 
-gulp.task('vendor-scripts', ['jshint', 'install'], function() {
+gulp.task('vendor-scripts', ['jshint', 'bower'], function() {
   return gulp.src(bowerFiles())
     .pipe(concat('vendor.min.js'))
     .pipe(gulp.dest('dist/js'))

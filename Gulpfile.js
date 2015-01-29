@@ -11,4 +11,4 @@ require('fs').readdirSync('./gulptasks').forEach(function(file) {
 
 gulp.task('build', ['vendor-scripts', 'scripts', 'stylus', 'jade-build', 'inject']);
 
-gulp.task('serve', ['jade', 'install', 'vendor-scripts', 'stylus-watch', 'watch', 'webserver']);
+gulp.task('serve', ['jade', 'vendor-scripts', 'stylus-watch', 'watch', 'webserver']);
