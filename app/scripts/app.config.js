@@ -16,4 +16,4 @@ angular.module('huddyfrontendApp')
         controller: 'DummyCtrl'
       });
   }])
-  .constant('API_URL', 'http://localhost/huddyapi/public/dummy');
+  .constant('API_URL', 'http://dev.dummyapi.com/');

@@ -6,7 +6,7 @@ angular.module('huddyfrontendApp')
       getData: function () {
         var deferred = $q.defer();
 
-        $http.get(API_URL).success(function (response) {
+        $http.get(API_URL + 'dummy').success(function (response) {
           deferred.resolve(response.data);
         }).error(function (error) {
           deferred.reject(error);
